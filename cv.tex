@@ -1,0 +1,169 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[margin=.5in,nofoot,nohead]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+
+\pagenumbering{gobble}
+
+
+% ========= Section formatting ===================
+\titleformat{\section}
+	{\scshape \Large}
+	{}
+	{0em}
+	{}	[\color{black}\titlerule \vspace{-2.5pt}]
+
+
+% ========= Custom commands ======================
+\newcommand{\OneRowSubheading}[2]{
+	\item\vspace{-5pt}
+		\begin{tabular*}{.97\textwidth}{l @{\extracolsep{\fill}} r}
+			\textbf{#1} & #2
+		\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\TwoRowSubheading}[4]{
+	\item\vspace{-5pt}
+		\begin{tabular*}{.97\textwidth}{l @{\extracolsep{\fill}} r}
+			\textbf{#1} & #2 \\
+			\textit{\small #3} & \textit{\small #4} \\
+		\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\ListItem}[2]{
+	\item\small
+		\textbf{#1}{: #2 \vspace{-2.5pt}}
+}
+
+\newcommand{\SubItem}[2]{\ListItem{#1}{#2}}
+
+
+
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% ========= HEADING ==============================
+\begin{table}[]
+	\begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} r}
+		{\Huge \textbf{\textsc{$\cdot \cdot \cdot$ Sean W Evans $\cdot \cdot \cdot$}}} &
+		\begin{tabular}[r]{@{}r@{}} 
+			\includegraphics[scale=0.04]{call.png} \textbf{1.516.330.2517} \\ 
+			\includegraphics[scale=0.05]{email.png} \href{mailto:Sean.W.Evans@gmail.com}{\textbf{\textsc{sean.w.evans@gmail.com}}} \\ 
+			\includegraphics[scale=0.02]{web.png} \href{http://github.com/SeanWEvans}{\textbf{\textsc{http://github.com/seanwevans}}}  
+		\end{tabular} 
+	\end{tabular*}
+\end{table}
+
+
+
+% ========= EDUCATION ============================
+\section{Education}
+	\begin{itemize}[leftmargin=*]
+		\TwoRowSubheading
+			{\href{http://liu.edu/post}{Long Island University}}{Brookville, NY}
+			{Bachelor of Science in Mathematics;  GPA: \textbf{3.90}}{Sep. 2015 -- Dec. 2018}
+	\end{itemize}
+
+
+
+% ========= AWARDS ===============================
+\section{Awards}
+	\begin{itemize}[leftmargin=*]
+		\TwoRowSubheading
+			{Dean's List}{2015 -- 2018}{For attaining a semester GPA above 3.75}{}
+		\TwoRowSubheading
+			{Honors Award}{2015 -- 2018}{For attending LIU's honors college}{}
+		\TwoRowSubheading
+			{Barnes \& Noble Scholarship}{2015 -- 2016}{Scholarship for returning students}{}
+		\TwoRowSubheading
+			{Sally \& John Stark Endowment Scholarship}{2015 -- 2016}{Merit based scholarship}{}
+		\TwoRowSubheading
+			{Kathleen Gerla Endowment Scholarship}{2016 -- 2017}{Merit based scholarship}{}
+		\TwoRowSubheading
+			{Felicia Solins Endowment Scholarship}{2016 -- 2017}{Merit based scholarship}{}
+		\TwoRowSubheading
+			{Veterans Club Endowment Scholarship}{2016 -- 2017}{Merit based scholarship}{}
+	\end{itemize}
+
+
+
+% ========= SKILLS ===============================
+\section{Skills}
+	\vspace*{-15pt}\begin{multicols}{3}
+		\begin{itemize}[leftmargin=*]
+			\TwoRowSubheading
+				{\href{http://github.com/seanwevans/mycv}{Android Studio / Java}}{}
+				{Simple app development}{}
+			\TwoRowSubheading
+				{\href{http://github.com/seanwevans/odesolver}{C / C++}}{}
+				{Scientific computing}{}
+			\TwoRowSubheading
+				{\href{http://github.com/seanwevans/randommathematica}{Mathematica}}{}
+				{Scientific computing}{}
+			\TwoRowSubheading
+				{\href{http://github.com/seanwevans/randompython}{Python}}{}
+				{Scientific computing}{}
+			\TwoRowSubheading
+				{\href{http://github.com/seanwevans/massenv}{\LaTeX}}{}
+				{General scripted layouts}{}
+			\TwoRowSubheading
+				{Microsoft Office Suite}{}
+				{High-level proficiency}{}
+			\end{itemize}
+	\end{multicols}
+	
+	
+	
+% ========= EXPERIENCE ===========================
+\section{Experience}
+	\begin{itemize}[leftmargin=*]
+		\TwoRowSubheading
+			{\href{http://comconcepts.com}{Communication Concepts}}{Tampa, FL}
+			{Field Technician II}{Feb 2014 -- Sep 2015}
+		\begin{itemize}
+			\ListItem{Field Technician}
+				{Traveled to a variety of east-coast train yards to install and integrate industrial-grade security camera systems.}
+			\ListItem{Project Lead}
+				{Acted as lead on a 65-camera, fiber-optic backbone camera system through the heart of the DC corridor.}
+	  		\ListItem{Assembler}
+				{Assembled a variety of custom-made, complex, networked, industrial-hardened camera systems.}
+			\ListItem{Quality Assurance Tester}
+				{Tested and verified a variety of custom-made camera systems.}
+		\end{itemize}
+	\end{itemize}
+
+
+	
+% ========= AFFILIATIONS =========================
+\section{Professional Affiliations}
+	\begin{itemize}[leftmargin=*]
+		\OneRowSubheading
+			{\href{http://phietasigma.org/}{Phi Eta Sigma National Honor Society}}{2015 -- Present}
+		\OneRowSubheading
+			{\href{http://kappamuepsilon.org}{Kappa Mu Epsilon National Mathematics Honor Society}}{2018 -- Present}
+		\OneRowSubheading
+			{\href{http://ams.org}{American Mathematical Society}}{2018 -- Present}
+	\end{itemize}
+
+
+
+% ========= REFERENCES ===========================
+\section{References}
+	\begin{itemize}[leftmargin=*]
+		\TwoRowSubheading
+			{Vincent Scovetta}{Professor of Computer Science}
+			{\href{mailto:Vincent.Scovetta@liu.edu}{Vincent.Scovetta@liu.edu}}{Long Island University}
+		\TwoRowSubheading
+			{Mahmoud Zeinalian}{Professor of Mathematics}
+			{\href{mailto:Mahmoud.Zeinalian@liu.edu}{Mahmoud.Zeinalian@liu.edu}}{Long Island University}
+	\end{itemize}
+	
+	
+	
+\end{document}
