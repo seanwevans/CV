@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.29)  29 MAR 2018 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2018.4.26)  9 MAY 2018 13:40
 entering extended mode
 **./cv.tex
 (cv.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 73 language(s) loaded.
+Babel <3.12> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
@@ -29,7 +29,7 @@ File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
-Package: geometry 2018/03/24 v5.7 Page Geometry
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
@@ -68,12 +68,12 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+(C:\Users\seanw\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box26
 \beforetitleunit=\skip43
@@ -134,7 +134,7 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \colbreak@box=\box52
 \mc@col@check@num=\count98
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+(C:\Users\seanw\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip47
 \enit@outerparindent=\dimen125
@@ -143,7 +143,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitdp@description=\count99
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -166,7 +166,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -199,48 +199,49 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@pagecounter=\count101
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count102
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4509.
-Package hyperref Info: Link nesting OFF on input line 4514.
-Package hyperref Info: Hyper index ON on input line 4517.
-Package hyperref Info: Plain pages OFF on input line 4524.
-Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4762.
+Package hyperref Info: Bookmarks ON on input line 4751.
 \c@Hy@tempcnt=\count103
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(C:\Users\seanw\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5115.
+LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen127
 \Fld@menulength=\count104
 \Field@Width=\dimen128
 \Fld@charsize=\dimen129
-Package hyperref Info: Hyper figures OFF on input line 6369.
-Package hyperref Info: Link nesting OFF on input line 6374.
-Package hyperref Info: Hyper index ON on input line 6377.
-Package hyperref Info: backreferencing OFF on input line 6384.
-Package hyperref Info: Link coloring OFF on input line 6389.
-Package hyperref Info: Link coloring with OCG OFF on input line 6394.
-Package hyperref Info: PDF/A mode OFF on input line 6399.
-LaTeX Info: Redefining \ref on input line 6439.
-LaTeX Info: Redefining \pageref on input line 6443.
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
 \Hy@abspage=\count105
 \c@Item=\count106
 \c@Hfootnote=\count107
 )
-Package hyperref Info: Driver: hpdftex.
+
+Package hyperref Message: Driver: hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
 \Fld@listcount=\count108
 \c@bookmark@seq@number=\count109
 
@@ -319,7 +320,7 @@ LaTeX Font Info:    ... okay on input line 49.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\seanw\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count110
 \scratchdimen=\dimen132
@@ -384,18 +385,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <call.png, id=27, 256.96pt x 256.96pt>
 File: call.png Graphic file (type png)
 <use call.png>
-Package pdftex.def Info: call.png  used on input line 56.
-(pdftex.def)             Requested size: 10.27664pt x 10.27664pt.
+Package pdftex.def Info: call.png  used on input line 56. on input line 56.
+Package pdftex.def Info: Requested size: 10.27664pt x 10.27664pt on input line 
+56.
 <email.png, id=29, 200.75pt x 200.75pt>
 File: email.png Graphic file (type png)
 <use email.png>
-Package pdftex.def Info: email.png  used on input line 57.
-(pdftex.def)             Requested size: 10.03809pt x 10.03809pt.
+Package pdftex.def Info: email.png  used on input line 57. on input line 57.
+Package pdftex.def Info: Requested size: 10.03809pt x 10.03809pt on input line 
+57.
 <web.png, id=31, 513.92pt x 513.92pt>
 File: web.png Graphic file (type png)
 <use web.png>
-Package pdftex.def Info: web.png  used on input line 58.
-(pdftex.def)             Requested size: 10.28056pt x 10.28056pt.
+Package pdftex.def Info: web.png  used on input line 58. on input line 58.
+Package pdftex.def Info: Requested size: 10.28056pt x 10.28056pt on input line 
+58.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 67.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -433,7 +437,7 @@ Overfull \hbox (362.70659pt too wide) in paragraph at lines 117--118
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
-[1{C:/Users/Sean/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
  <./call.png> <./email.png> <./web.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
@@ -445,27 +449,29 @@ Package rerunfilecheck Info: File `cv.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 6635 strings out of 493315
- 97384 string characters out of 3139177
- 201576 words of memory out of 3000000
- 10111 multiletter control sequences out of 15000+200000
+ 6624 strings out of 493318
+ 97259 string characters out of 3138998
+ 200998 words of memory out of 3000000
+ 10098 multiletter control sequences out of 15000+200000
  19341 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,19n,33p,181b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/cm-super/sfbi1000.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/cm-super/sfbx0800.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/cm-super/sfbx1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/cm-super/sfbx1095.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-
-super/sfcc1440.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfr
-m1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfxc1095.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/cm-super/sfxc2488.pfb>
-Output written on cv.pdf (1 page, 215413 bytes).
+ <C:\Users\seanw\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecrm1000.pk> <C:\Users\seanw\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1000.pk> <C:\Users\seanw\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecbx0800.pk> <C:\Users\seanw\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecbi1000.pk> <C:\Users\seanw\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\seanw\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\seanw\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Us
+ers\seanw\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.
+pk> <C:\Users\seanw\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecbx1095.pk> <C:\Users\seanw\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecxc2488.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb>
+Output written on cv.pdf (1 page, 135195 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 362 PDF objects out of 1000 (max. 8388607)
  8 named destinations out of 1000 (max. 500000)
  64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
