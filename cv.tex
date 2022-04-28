@@ -1,169 +1,204 @@
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage[T1]{fontenc}
-\usepackage[margin=.5in,nofoot,nohead]{geometry}
+\documentclass[a3paper]{article}
+\usepackage[margin=1in]{geometry}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fontawesome}
 
-\pagenumbering{gobble}
+\pagestyle{empty}
 
-
-% ========= Section formatting ===================
-\titleformat{\section}
-	{\scshape \Large}
-	{}
-	{0em}
-	{}	[\color{black}\titlerule \vspace{-2.5pt}]
-
-
-% ========= Custom commands ======================
 \newcommand{\OneRowSubheading}[2]{
-	\item\vspace{-5pt}
-		\begin{tabular*}{.97\textwidth}{l @{\extracolsep{\fill}} r}
+	\item
+		\begin{tabular*}{.95\textwidth}{l @{\extracolsep{\fill}} r}
 			\textbf{#1} & #2
-		\end{tabular*}\vspace{-5pt}
+		\end{tabular*}
 }
 
 \newcommand{\TwoRowSubheading}[4]{
-	\item\vspace{-5pt}
-		\begin{tabular*}{.97\textwidth}{l @{\extracolsep{\fill}} r}
+	\item
+		\begin{tabular*}{.95\textwidth}{l @{\extracolsep{\fill}} r}
 			\textbf{#1} & #2 \\
 			\textit{\small #3} & \textit{\small #4} \\
-		\end{tabular*}\vspace{-5pt}
+		\end{tabular*}\vspace{-1em}
 }
 
 \newcommand{\ListItem}[2]{
-	\item\small
-		\textbf{#1}{: #2 \vspace{-2.5pt}}
+	\item \small \textbf{#1}{: \it #2}
 }
 
 \newcommand{\SubItem}[2]{\ListItem{#1}{#2}}
 
+\titleformat{\section}
+	{\scshape \Large}
+	{}
+	{0em}
+	{}	
+	[\color{black} \titlerule]
+	
+\titleformat{\subsection}
+    {\scshape \large}
+    {}
+    {0em}
+    {}
+    []
 
 
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-% ========= HEADING ==============================
+% HEADING
 \begin{table}[]
 	\begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} r}
-		{\Huge \textbf{\textsc{$\cdot \cdot \cdot$ Sean W Evans $\cdot \cdot \cdot$}}} &
-		\begin{tabular}[r]{@{}r@{}} 
-			\includegraphics[scale=0.04]{call.png} \textbf{1.516.330.2517} \\ 
-			\includegraphics[scale=0.05]{email.png} \href{mailto:sean@seanwevans.com}{\textbf{\textsc{sean@seanwevans.com}}} \\ 
-			\includegraphics[scale=0.02]{web.png} \href{http://seanwevans.com}{\textbf{\textsc{http://seanwevans.com}}}  
+		{\Huge \textsc{Sean W Evans}} &
+		\begin{tabular}[r]{lr} 
+			\href{tel:15163302517}{\faPhone} & 
+			\href{tel:15163302517}{\textbf{\texttt{+1$\cdot$516$\cdot$330$\cdot$2517}}} \\ 
+			\href{mailto:Sean.W.Evans@gmail.com}{\faEnvelope} & 
+			\href{mailto:Sean.W.Evans@gmail.com}{\textbf{\texttt{\color{blue}\underline {Sean.W.Evans@gmail.com}}}} \\ 			
+			\href{http://github.com/SeanWEvans}{\faGithub} & \href{http://github.com/SeanWEvans}{\textbf{\texttt{\color{blue}\underline{github.com/SeanWEvans}}}}
 		\end{tabular} 
 	\end{tabular*}
 \end{table}
 
+% TECHNICAL SKILL SET
+\section{Skill}
+\subsection*{\faCodeFork \ Languages} \vspace{-1em}
+\begin{multicols}{4}
+\small \begin{itemize} 
+    \item[\faDiamond] Python (6yrs)
+    \item[\faSuperscript] \LaTeX\ (6)    
+    \item[\faFighterJet] C\# (5)
+    \item[\faCopyright] C (5)
+    \item[\faAmbulance] Perl (4)
+    \item[\faTerminal] Batch/CMD (4)
+    \item[\faTerminal] Bash (4)
+    \item[\faTerminal] PowerShell (4)
+    \item[\faCreativeCommons] C++/CUDA (2)
+    \item[\faJsfiddle] JavaScript/CSS (1)
+    \item[\faCoffee ] Java (1)
+\end{itemize}
+\end{multicols}
 
+\subsection*{\faWrench \ Tools} \vspace{-1em}
+\begin{multicols}{4}
+\small \begin{itemize}
+    \item[\faImage] OpenCV
+    \item[\faFire] PyTorch
+    \item[\faGoogle] Tensorflow
+    \item[\faBuildingO] CMake
+    \item[\faBuilding] Make
+    \item[\faGitSquare]git
+    \item[\faRocket] MathJax
+    \item[\faDatabase] PostGresSQL
+    \item[\faDatabase] T-SQL
+    \item[\faPaperPlaneO] PostScript
+    \item[\faPaperPlane] GhostScript
+    \item[\faWindows] Microsoft Office SDK
+    \item[\faFilePdfO] Adobe SDK
+    \item[\faSitemap] React
+    \item[\faTh] libXML
+    \item[\faRegistered] PCRE
+    \item[\faHashtag] iTextSharp
+    \item[\faLinux] Linux CoreUtils
+    \item[\faAndroid] Android Studio
+    \item[\faGlide] Gradle
+    \item[\faSubscript] MathType
+    \item[\faImage] ImageMagick
+\end{itemize}
+\end{multicols}
 
-% ========= EDUCATION ============================
-\section{Education}
-	\begin{itemize}[leftmargin=*]
-		\TwoRowSubheading
-			{\href{http://liu.edu/post}{Long Island University}}{Brookville, NY}
-			{Bachelor of Science in Mathematics;  GPA: \textbf{3.90}}{Sep. 2015 -- Dec. 2018}
-	\end{itemize}
-
-
-
-% ========= AWARDS ===============================
-\section{Awards}
-	\begin{itemize}[leftmargin=*]
-		\TwoRowSubheading
-			{Dean's List}{2015 -- 2018}{For attaining a semester GPA above 3.75}{}
-		\TwoRowSubheading
-			{Honors Award}{2015 -- 2018}{For attending LIU's honors college}{}
-		\TwoRowSubheading
-			{Barnes \& Noble Scholarship}{2015 -- 2016}{Scholarship for returning students}{}
-		\TwoRowSubheading
-			{Sally \& John Stark Endowment Scholarship}{2015 -- 2016}{Merit based scholarship}{}
-		\TwoRowSubheading
-			{Kathleen Gerla Endowment Scholarship}{2016 -- 2017}{Merit based scholarship}{}
-		\TwoRowSubheading
-			{Felicia Solins Endowment Scholarship}{2016 -- 2017}{Merit based scholarship}{}
-		\TwoRowSubheading
-			{Veterans Club Endowment Scholarship}{2016 -- 2017}{Merit based scholarship}{}
-	\end{itemize}
-
-
-
-% ========= SKILLS ===============================
-\section{Skills}
-	\vspace*{-15pt}\begin{multicols}{3}
-		\begin{itemize}[leftmargin=*]
-			\TwoRowSubheading
-				{\href{http://seanwevans.com/mycv}{Android Studio / Java}}{}
-				{Simple app development}{}
-			\TwoRowSubheading
-				{\href{http://seanwevans.com/odesolver}{C / C++}}{}
-				{Scientific computing}{}
-			\TwoRowSubheading
-				{\href{http://seanwevans.com/randommathematica}{Mathematica}}{}
-				{Scientific computing}{}
-			\TwoRowSubheading
-				{\href{http://seanwevans.com/randompython}{Python}}{}
-				{Scientific computing}{}
-			\TwoRowSubheading
-				{\href{http://seanwevans.com/cv}{\LaTeX}}{}
-				{General scripted layouts}{}
-			\TwoRowSubheading
-				{Microsoft Office Suite}{}
-				{High-level proficiency}{}
-			\end{itemize}
-	\end{multicols}
-	
-	
-	
-% ========= EXPERIENCE ===========================
+% EXPERIENCE 
 \section{Experience}
-	\begin{itemize}[leftmargin=*]
-		\TwoRowSubheading
-			{\href{http://comconcepts.com}{Communication Concepts}}{Tampa, FL}
-			{Field Technician II}{Feb 2014 -- Sep 2015}
-		\begin{itemize}
-			\ListItem{Field Technician}
-				{Traveled to a variety of east-coast train yards to install and integrate industrial-grade security camera systems.}
-			\ListItem{Project Lead}
-				{Acted as lead on a 65-camera, fiber-optic backbone camera system through the heart of the DC corridor.}
-	  		\ListItem{Assembler}
-				{Assembled a variety of custom-made, complex, networked, industrial-hardened camera systems.}
-			\ListItem{Quality Assurance Tester}
-				{Tested and verified a variety of custom-made camera systems.}
+\begin{itemize}[label=\faUsers]
+    
+    \TwoRowSubheading
+        {Private Venture}{Queens, NY}
+        {Machine Learning / Software Engineer}{Dec 2021 -- Current}
+    
+    \begin{itemize}[label=\faGears]
+
+		\ListItem{App}{simple Google maps based application for web, iOS and Android}
+		\begin{itemize}[label=\faGear]
+			\item back-end: Python \& PostGresSQL
+			\item front-end: ReactJS
+			\item Built to be fast, simple and reliable
+			\item Optimized for repeatability
 		\end{itemize}
+    
+    \end{itemize}
+
+    \vspace{1em}
+
+	\TwoRowSubheading
+		{\href{http://www.dclab.com}{Data Conversion Laboratory}}{Queens, NY}
+		{Machine Learning / Software Engineer}{May 2018 -- Current}
+	
+	\begin{itemize}[label=\faGears] 
+
+		\ListItem{PDF Extraction}{Implemented machine-learning model for automated document analysis and extraction}
+		\begin{itemize}[label=\faGear]
+			\item Used detectron2 (PyTorch) to train a statistical model to recognize equations, tables and figures from image data.
+			\item Comparable accuracy to industry leaders, including Microsoft Word and Adobe Acrobat
+			\item Extremely general, can estimate document chunk types across several different document domains
+		\end{itemize}
+
+		\ListItem{Document Auto-Styling}{Used natural language processing techniques to automate a manual styling process}
+		\begin{itemize}[label=\faGear]
+			\item Used SpaCy and Microsoft Office SDK to automatically style Word documents
+			\item Reduction of human touch-time on documents by 50\%
+			\item Potential to completely eliminate manual process 
+		\end{itemize}
+
+		\ListItem{Equation OCR}{Implemented machine-learning model to estimate \LaTeX\ markup from raw image data}
+		\begin{itemize}[label=\faGear]
+			\item Implemented CNN-RNN, Encoder-Decoder in Torch7 / Lua to convert images into \LaTeX\ markup
+			\item Reproduced state-of-the-art results from academic paper
+			\item Used perl to create large, high-quality training dataset from business XML
+		\end{itemize}
+	
+		\ListItem{Checkbox Detector}{Designed and implemented an optical mark recognition engine}
+		\begin{itemize}[label=\faGear]
+			\item Used OpenCV to achieve greater than 96\% accuracy on arbitrary checkboxes
+			\item Multiple checkbox geometries and fills supported
+			\item Prototype in python, production version to be built in C++
+		\end{itemize}
+
+		\ListItem{PDF Cleaning}{Designed and implemented an PDF cleaning regiment based on common computer vision techniques}
+		\begin{itemize}[label=\faGear]
+			\item Batch PDF processing system designed to deskew, despeckle, rotate and OCR all pages
+			\item Real world throughput on the order of 100,000 pages per week per 8-core server
+			\item Used as a back end in a dynamic template generation application to quickly view and classify examples across documents
+		\end{itemize}
+
+		\ListItem{JATS Quick Fixes}{Designed and implemented automated \LaTeX\ fixes inside of JATS xml documents}
+		\begin{itemize}[label=\faGear]
+			\item Used libxml to parse JATS xml and fix the contained \LaTeX\ equations based on commonly made errors
+			\item Decreased manual intervention from 40 hours per week (dedicated position) to less than 3 hours per week
+			\item Intimate knowledge of \LaTeX\ and mathjax required
+		\end{itemize}
+
+		\ListItem{General .docx Converter}{Used Microsoft Office SDK to convert any format Microsoft Word can handle to .docx}
+		\begin{itemize}[label=\faGear]
+			\item Microsoft Office SDK and Microsoft InterOp libraries used to handle conversion
+			\item Production level options built-in including accepting tracked changes automatically and batch processing
+		\end{itemize}
+
+		\ListItem{General}{Miscellaneous programming}
+		\begin{itemize}[label=\faGear]
+			\item XML parsing using DOM \& SAX parsers
+			\item Unit, regression \& integration testing
+            \item Bash and Batch scripting
+			\item Test driven development
+			\item Agile development
+		\end{itemize}
+
 	\end{itemize}
-
-
-	
-% ========= AFFILIATIONS =========================
-\section{Professional Affiliations}
-	\begin{itemize}[leftmargin=*]
-		\OneRowSubheading
-			{\href{http://phietasigma.org/}{Phi Eta Sigma National Honor Society}}{2015 -- Present}
-		\OneRowSubheading
-			{\href{http://kappamuepsilon.org}{Kappa Mu Epsilon National Mathematics Honor Society}}{2018 -- Present}
-		\OneRowSubheading
-			{\href{http://ams.org}{American Mathematical Society}}{2018 -- Present}
-	\end{itemize}
-
-
-
-% ========= REFERENCES ===========================
-\section{References}
-	\begin{itemize}[leftmargin=*]
-		\TwoRowSubheading
-			{Vincent Scovetta}{Professor of Computer Science}
-			{\href{mailto:Vincent.Scovetta@liu.edu}{Vincent.Scovetta@liu.edu}}{Long Island University}
-		\TwoRowSubheading
-			{Mahmoud Zeinalian}{Professor of Mathematics}
-			{\href{mailto:Mahmoud.Zeinalian@liu.edu}{Mahmoud.Zeinalian@liu.edu}}{Long Island University}
-	\end{itemize}
 	
 	
+	\vspace{1em}
 	
+\end{itemize}
+
 \end{document}
+
