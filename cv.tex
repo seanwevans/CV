@@ -1,186 +1,115 @@
-\documentclass{article}
-\usepackage[margin=0.75in,paperheight=12.5in]{geometry}
-\usepackage[usenames,dvipsnames]{color}
+\documentclass[a4paper]{article}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{fontawesome}
+\usepackage{array}
 
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black
+}
+
+\titleformat{\section}{\scshape \Large}{}{0em}{}[\titlerule]
 \pagestyle{empty}
 
-\newcommand{\OneRowSubheading}[2]{
-	\item
-		\begin{tabular*}{.95\textwidth}{l @{\extracolsep{\fill}} r}
-			\textbf{#1} & #2
-		\end{tabular*}
-}
-
 \newcommand{\TwoRowSubheading}[4]{
-	\item
-		\begin{tabular*}{.95\textwidth}{l @{\extracolsep{\fill}} r}
-			\textbf{#1} & #2 \\
-			\textit{\small #3} & \textit{\small #4} \\
-		\end{tabular*} \vspace{-0.5em}
+  \item \begin{tabular*}{.95\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
+    \textbf{#1} & \textbf{#2} \\
+    {\color{gray}#3} & {\itshape #4} \\
+  \end{tabular*}
 }
-
-\newcommand{\ListItem}[2]{
-	\item \small \textbf{#1}{: \it #2}
-}
-
-\newcommand{\SubItem}[2]{\ListItem{#1}{#2}}
-
-\titleformat{\section}
-	{\scshape \Large}
-	{}
-	{0em}
-	{}	
-	[\color{black} \titlerule]
-	
-\titleformat{\subsection}
-    {\scshape \large}
-    {}
-    {0em}
-    {}
-    []
-
 
 \begin{document}
 
-% HEADING
-\begin{table}[]
-	\begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} r}
-		{\Huge \textsc{Sean W Evans}} &
-		\begin{tabular}[r]{lr} 
-			\href{tel:15163302517}{\faPhone} & 
-			\href{tel:15163302517}{\textbf{\texttt{+1$\cdot$516$\cdot$330$\cdot$2517}}} \\ 
-			\href{mailto:Sean.W.Evans@gmail.com}{\faEnvelope} & 
-			\href{mailto:Sean.W.Evans@gmail.com}{\textbf{\texttt{\color{blue}\underline {Sean.W.Evans@gmail.com}}}} \\ 			
-			\href{http://github.com/SeanWEvans}{\faGithub} & \href{http://github.com/SeanWEvans}{\textbf{\texttt{\color{blue}\underline{github.com/SeanWEvans}}}}
-		\end{tabular} 
-	\end{tabular*}
-\end{table}
+% HEADER
+\begin{tabular*}{\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
+ \Huge \textsc{Sean W. Evans} &
+ \href{mailto:Sean@SeanWEvans.com}{E-Mail} \ \faEnvelopeO \\
+ \faPhone\ \href{tel:15163302517}{+1 (516) 330-2517}  &
+ \href{https://github.com/SeanWEvans}{Github} \ \faGithub \\
+ \faHome\ \href{https://SeanWEvans.com}{SeanWEvans.com} & 
+ \href{https://www.linkedin.com/in/sean-evans-49398229b}{Linked In} \ \faLinkedinSquare
+\end{tabular*}
 
-% TECHNICAL SKILL SET
-\vspace*{-5em}
-\section{Skill}
-\subsection*{\faCodeFork \ Languages} \vspace{-1em}
-\begin{multicols}{4}
-\small \begin{itemize} 
-    \item[\faDiamond] Python (6yrs)
-    \item[\faSuperscript] \LaTeX\ (6)    
-    \item[\faFighterJet] C\# (5)
-    \item[\faCopyright] C (5)
-    \item[\faAmbulance] Perl (4)
-    \item[\faTerminal] Batch/CMD (4)
-    \item[\faTerminal] Bash (4)
-    \item[\faTerminal] PowerShell (4)
-    \item[\faCreativeCommons] C++/CUDA (2)
-    \item[\faJsfiddle] JavaScript/CSS (1)
-    \item[\faCoffee ] Java (1)
-\end{itemize}
-\end{multicols}
 
-\subsection*{\faWrench \ Tools} \vspace{-1em}
-\begin{multicols}{4}
-\small \begin{itemize}
-    \item[\faImage] OpenCV
-    \item[\faFire] PyTorch
-    \item[\faGoogle] Tensorflow
-    \item[\faBuildingO] CMake
-    \item[\faBuilding] Make
-    \item[\faGitSquare]git
-    \item[\faRocket] MathJax
-    \item[\faDatabase] PostGresSQL
-    \item[\faDatabase] T-SQL
-    \item[\faPaperPlaneO] PostScript
-    \item[\faPaperPlane] GhostScript
-    \item[\faWindows] Microsoft Office SDK
-    \item[\faFilePdfO] Adobe SDK
-    \item[\faSitemap] React
-    \item[\faTh] libXML
-    \item[\faRegistered] PCRE
-    \item[\faHashtag] iTextSharp
-    \item[\faLinux] Linux CoreUtils
-    \item[\faAndroid] Android Studio
-    \item[\faGlide] Gradle
-    \item[\faSubscript] MathType
-    \item[\faImage] ImageMagick
+% SKILLS
+\section{Skills}
+\begin{itemize}[leftmargin=*,label=]
+    \item \textbf{Programming:} Python (6 yrs), C\#, C, C++/CUDA, Perl
+    \item \textbf{Machine Learning:} PyTorch, TensorFlow, OpenCV, SpaCy
+    \item \textbf{Data \& Tools:} PostgreSQL, T-SQL, Git, Linux, Make/CMake
+    \item \textbf{Document \& Image Processing:} PDF manipulation, MS Office SDK, Adobe SDK
+    \item \textbf{Typesetting:} \LaTeX, MathJax
 \end{itemize}
-\end{multicols}
 
 % EXPERIENCE 
 \section{Experience}
-\begin{itemize}[label=\faUsers]    
+\begin{itemize}[leftmargin=*,label=]
 
-	\TwoRowSubheading
-		{\href{http://www.dclab.com}{Data Conversion Laboratory}}{Queens, NY}
-		{Machine Learning / Software Engineer}{May 2018 -- Current}
-	
-	\begin{itemize}[label=\faGears] 
+\TwoRowSubheading
+{Data Conversion Laboratory}
+{Remote}
+{Machine Learning Engineer}
+{May 2021 -- Present}
 
-		\ListItem{PDF Extraction}{Implemented machine-learning model for automated document analysis and extraction}
-		\begin{itemize}[label=\faGear]
-			\item Used detectron2 (PyTorch) to train a statistical model to recognize equations, tables and figures from image data.
-			\item Comparable accuracy to industry leaders, including Microsoft Word and Adobe Acrobat
-			\item Extremely general, can estimate document chunk types across several different document domains
-		\end{itemize}
+\begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
+    \item \textbf{Developed} a Detectron2-based ML model to classify document components (equations, tables, figures) with accuracy on par with industry leaders, reducing manual classification by 50\%.
+    \item \textbf{Automated} document styling using NLP (SpaCy) and the MS Office SDK, cutting manual styling time by half.
+    \item \textbf{Built} an Equation OCR system using a CNN-RNN Encoder-Decoder architecture in Torch7/Lua to convert images to \LaTeX, achieving near state-of-the-art accuracy.
+    \item \textbf{Implemented} a checkbox detection system using OpenCV, achieving >96\% accuracy across multiple checkbox formats.
+\end{itemize}
 
-		\ListItem{Document Auto-Styling}{Used natural language processing techniques to automate a manual styling process}
-		\begin{itemize}[label=\faGear]
-			\item Used SpaCy and Microsoft Office SDK to automatically style Word documents
-			\item Reduction of human touch-time on documents by 50\%
-			\item Potential to completely eliminate manual process 
-		\end{itemize}
+\TwoRowSubheading
+{Data Conversion Laboratory}
+{Remote}
+{Software Engineer}
+{Sep 2020 -- May 2021}
 
-		\ListItem{Equation OCR}{Implemented machine-learning model to estimate \LaTeX\ markup from raw image data}
-		\begin{itemize}[label=\faGear]
-			\item Implemented CNN-RNN, Encoder-Decoder in Torch7 / Lua to convert images into \LaTeX\ markup
-			\item Reproduced state-of-the-art results from academic paper
-			\item Used perl to create large, high-quality training dataset from business XML
-		\end{itemize}
-	
-		\ListItem{Checkbox Detector}{Designed and implemented an optical mark recognition engine}
-		\begin{itemize}[label=\faGear]
-			\item Used OpenCV to achieve greater than 96\% accuracy on arbitrary checkboxes
-			\item Multiple checkbox geometries and fills supported
-			\item Prototype in python, production version to be built in C++
-		\end{itemize}
+\begin{itemize}[leftmargin=1em]
+    \item Implemented a scalable PDF cleaning and OCR pipeline (deskew, despeckle, rotate), processing 100k+ pages/week/server.
+    \item Created automated \LaTeX\ correction scripts within JATS XML, reducing a dedicated 40-hour manual intervention to under 3 hours weekly.
+    \item Built a general .docx converter using MS Office SDK and InterOp, seamlessly handling multiple formats and tracked changes.
+    \item Employed Agile methodologies, test-driven development, and XML parsing (DOM/SAX) for robust data transformations.
+\end{itemize}
 
-		\ListItem{PDF Cleaning}{Designed and implemented an PDF cleaning regiment based on common computer vision techniques}
-		\begin{itemize}[label=\faGear]
-			\item Batch PDF processing system designed to deskew, despeckle, rotate and OCR all pages
-			\item Real world throughput on the order of 100,000 pages per week per 8-core server
-			\item Used as a back end in a dynamic template generation application to quickly view and classify examples across documents
-		\end{itemize}
+\TwoRowSubheading
+{Data Conversion Laboratory}
+{Queens, NY}
+{Lead Technology Analyst}
+{Sep 2019 -- Sep 2020}
 
-		\ListItem{JATS Quick Fixes}{Designed and implemented automated \LaTeX\ fixes inside of JATS xml documents}
-		\begin{itemize}[label=\faGear]
-			\item Used libxml to parse JATS xml and fix the contained \LaTeX\ equations based on commonly made errors
-			\item Decreased manual intervention from 40 hours per week (dedicated position) to less than 3 hours per week
-			\item Intimate knowledge of \LaTeX\ and mathjax required
-		\end{itemize}
+\begin{itemize}[leftmargin=1em]
+    \item Led technical initiatives to streamline processing workflows, mentored junior staff, and coordinated with stakeholders.
+\end{itemize}
 
-		\ListItem{General .docx Converter}{Used Microsoft Office SDK to convert any format Microsoft Word can handle to .docx}
-		\begin{itemize}[label=\faGear]
-			\item Microsoft Office SDK and Microsoft InterOp libraries used to handle conversion
-			\item Production level options built-in including accepting tracked changes automatically and batch processing
-		\end{itemize}
+\TwoRowSubheading
+{Data Conversion Laboratory}
+{Queens, NY}
+{Technology Analyst}
+{May 2018 -- Sep 2019}
 
-		\ListItem{General}{Miscellaneous programming}
-		\begin{itemize}[label=\faGear]
-			\item XML parsing using DOM \& SAX parsers
-			\item Unit, regression \& integration testing
-           		\item Test driven development
-			\item Agile development
-		\end{itemize}
+\begin{itemize}[leftmargin=1em]
+    \item Contributed to custom data conversion solutions and maintained production-level tools for large-scale document migrations.
+\end{itemize}
 
-	\end{itemize}
-	
-	
-	\vspace{1em}
-	
+\end{itemize}
+
+% EDUCATION
+\section{Education}
+\begin{itemize}[leftmargin=*]    
+\TwoRowSubheading
+{Long Island University}
+{Long Island, NY}
+{Bachelor of Science in Mathematics (in progress)}
+{2015--2018}
 \end{itemize}
 
 \end{document}
-
