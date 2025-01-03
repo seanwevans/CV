@@ -1,6 +1,6 @@
 # Sean W. Evans
 
-## [🌐](SeanWEvans.com) [✉️](Sean@SeanWEvans.com) [📞](tel:+15163302517)  [Github](https://github.com/SeanWEvans) [LinkedIn](https://www.linkedin.com/in/sean-evans-49398229b/)
+## [🌐](https://SeanWEvans.com) [✉️](Sean@SeanWEvans.com) [Github](https://github.com/SeanWEvans) [LinkedIn](https://www.linkedin.com/in/sean-evans-49398229b/)
 
 ---
 
