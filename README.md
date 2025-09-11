@@ -52,4 +52,4 @@ document migrations.
 
 ## Education
 ### Long Island University Long Island, NY
-- Bachelor of Science in Mathematics (in progress)
+- Bachelor of Science in Mathematics
