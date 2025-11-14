@@ -1,55 +1,54 @@
 # Sean W. Evans
 
-## [🌐](https://SeanWEvans.com) [✉️](mailto:Sean@SeanWEvans.com) [Github](https://github.com/SeanWEvans) [LinkedIn](https://www.linkedin.com/in/sean-evans-49398229b/)
+## 🌐 [Website](https://SeanWEvans.com) • ✉️ [Email](mailto:Sean@SeanWEvans.com) • [Github](https://github.com/SeanWEvans) • [LinkedIn](https://www.linkedin.com/in/sean-evans-49398229b/)
+
+---
+
+## Summary
+Systems-level engineer with 6+ years building end-to-end ML, vision, and document-analysis pipelines, with additional experience in C/C++/CUDA, runtime systems, Postgres tooling, and mathematical modeling. Specializes in rapid prototyping across abstraction layers (theory → GPU → product), automating complex workflows, and shipping high-reliability systems at scale.
 
 ---
 
 ## Skills
 
-- Programming: Python (6 yrs), C#, C, C++/CUDA, Perl
-- Machine Learning: PyTorch, TensorFlow, OpenCV, SpaCy
-- Data & Tools: PostgreSQL, T-SQL, Git, Linux, Make/CMake
-- Document & Image Processing: PDF manipulation, MS Office SDK, Adobe SDK
-- Typesetting: LaTeX, MathJax
+- **Languages:** Python, C, C++, CUDA, C#, Perl, SQL (PostgreSQL/T-SQL)
+- **Machine Learning:** PyTorch, TensorFlow, Detectron2, CNN/RNN OCR, NLP (SpaCy)
+- **Computer Vision:** OpenCV, document segmentation, structural analysis
+- **Systems & Performance:** Linux, Git, Make/CMake, multiprocessing, GPU kernels
+- **Data & SDKs:** PostgreSQL, XML (DOM/SAX), PDF libraries, MS Office SDK, Adobe SDK
+- **Scientific & Typesetting:** LaTeX, MathJax, numerical & geometric modeling
 
 ---
 
 ## Experience
 
-### Data Conversion Laboratory - Remote
-#### Machine Learning Engineer: May 2021 – Present
-- Developed a Detectron2-based ML model to classify document components (equations, tables, figures)
-with accuracy on par with industry leaders, reducing manual classification by 50%.
-- Automated document styling using NLP (SpaCy) and the MS Office SDK, cutting manual styling time
-by half.
-- Built an Equation OCR system using a CNN-RNN Encoder-Decoder architecture in Torch7/Lua to convert
-images to LATEX, achieving near state-of-the-art accuracy.
-- Implemented a checkbox detection system using OpenCV, achieving >96% accuracy across multiple
-checkbox formats.
+### **Data Conversion Laboratory — Remote**
+#### *Machine Learning Engineer (May 2021 – Feb 2025)*
+- Designed and deployed a Detectron2-based document segmentation model (equations, tables, figures) achieving industry-level accuracy and reducing manual classification by **50%**.
+- Built a CNN–RNN equation OCR engine (Torch7/Lua) converting images to LaTeX with near state-of-the-art accuracy in production.
+- Automated document styling with NLP + MS Office SDK, reducing a recurring 40-hour manual workflow to **under 2 hours**.
+- Implemented a robust OpenCV checkbox detection pipeline (>96% accuracy), tolerant to rotation, noise, and formatting variants.
+- Developed high-throughput processing systems capable of millions of pages/week across OCR, normalization, and structural analysis.
 
-### Data Conversion Laboratory - Remote
-#### Software Engineer: Sep 2020 – May 2021
-- Implemented a scalable PDF cleaning and OCR pipeline (deskew, despeckle, rotate), processing 100k+
-pages/week/server.
-- Created automated LATEX correction scripts within JATS XML, reducing a dedicated 40-hour manual
-intervention to under 2 hours weekly.
-- Built a general .docx converter using MS Office SDK and InterOp, seamlessly handling multiple formats
-and tracked changes.
-- Employed Agile methodologies, test-driven development, and XML parsing (DOM/SAX) for robust data
-transformations.
+### **Data Conversion Laboratory — Remote**
+#### *Software Engineer (Sep 2020 – May 2021)*
+- Built a scalable PDF cleaning + OCR preprocessing system processing **100k+ pages/week/server**.
+- Authored automated LaTeX correction and JATS XML tooling replacing a full-time manual process.
+- Developed a comprehensive .docx → XML converter via MS Office InterOp, normalizing heterogeneous client formats.
+- Used TDD, Agile processes, and robust XML parsing to deliver production-grade tools.
 
-### Data Conversion Laboratory - Queens, NY
-#### Lead Technology Analyst: Sep 2019 – Sep 2020
-- Led technical initiatives to streamline processing workflows, mentored junior staff, and coordinated with
-stakeholders.
+### **Data Conversion Laboratory — Queens, NY**
+#### *Lead Technology Analyst (Sep 2019 – Sep 2020)*
+- Led workflow optimization efforts, mentored junior engineers, and coordinated technical communication with stakeholders.
 
-### Data Conversion Laboratory - Queens, NY
-#### Technology Analyst: May 2018 – Sep 2019
-- Contributed to custom data conversion solutions and maintained production-level tools for large-scale
-document migrations.
+### **Data Conversion Laboratory — Queens, NY**
+#### *Technology Analyst (May 2018 – Sep 2019)*
+- Built custom data conversion & document-normalization tools for large-scale migration projects.
+- Maintained and enhanced high-volume production pipelines across multiple enterprise clients.
 
 ---
 
 ## Education
-### Long Island University Long Island, NY
-- Bachelor of Science in Mathematics
+
+### **Long Island University — Long Island, NY**
+- Bachelor of Science in Mathematics (2003–2026)
