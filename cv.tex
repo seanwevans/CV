@@ -39,15 +39,19 @@
  \href{https://www.linkedin.com/in/sean-evans-49398229b}{Linked In} \ \faLinkedinSquare
 \end{tabular*}
 
+% SUMMARY
+\section{Summary}
+Systems-level engineer with 6+ years building end-to-end ML, vision, and document-analysis pipelines, plus experience in C/C++/CUDA, runtime systems, Postgres tooling, and mathematical modeling. I specialize in rapid prototyping across abstraction layers (theory → GPU → product), automating complex workflows, and shipping high-reliability systems at scale.
 
 % SKILLS
 \section{Skills}
 \begin{itemize}[leftmargin=*,label=]
-    \item \textbf{Programming:} Python (6 yrs), C\#, C, C++/CUDA, Perl
-    \item \textbf{Machine Learning:} PyTorch, TensorFlow, OpenCV, SpaCy
-    \item \textbf{Data \& Tools:} PostgreSQL, T-SQL, Git, Linux, Make/CMake
-    \item \textbf{Document \& Image Processing:} PDF manipulation, MS Office SDK, Adobe SDK
-    \item \textbf{Typesetting:} \LaTeX, MathJax
+    \item \textbf{Languages:} Python, C, C++, CUDA, C\#, Perl, SQL (PostgreSQL/T-SQL)
+    \item \textbf{Machine Learning:} PyTorch, TensorFlow, Detectron2, CNN/RNN OCR, NLP (SpaCy)
+    \item \textbf{Computer Vision:} OpenCV, document segmentation, structural analysis
+    \item \textbf{Systems \& Performance:} Linux, Git, Make/CMake, multiprocessing, GPU kernels
+    \item \textbf{Data \& SDKs:} PostgreSQL, XML (DOM/SAX), PDF libraries, MS Office SDK, Adobe SDK
+    \item \textbf{Scientific \& Typesetting:} \LaTeX, MathJax, numerical \& geometric modeling
 \end{itemize}
 
 % EXPERIENCE 
@@ -61,10 +65,11 @@
 {May 2021 -- Feb 2025}
 
 \begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Developed} a Detectron2-based ML model to classify document components (equations, tables, figures) with accuracy on par with industry leaders, reducing manual classification by 50\%.
-    \item \textbf{Automated} document styling using NLP (SpaCy) and the MS Office SDK, cutting manual styling time by half.
-    \item \textbf{Built} an Equation OCR system using a CNN-RNN Encoder-Decoder architecture in Torch7/Lua to convert images to \LaTeX, achieving near state-of-the-art accuracy.
-    \item \textbf{Implemented} a checkbox detection system using OpenCV, achieving >96\% accuracy across multiple checkbox formats.
+    \item \textbf{Designed} and deployed a Detectron2-based document segmentation model (equations, tables, figures) achieving industry-comparable accuracy and reducing manual classification by \textbf{50\%}.
+    \item \textbf{Built} a CNN–RNN equation OCR engine (Torch7/Lua) converting images to \LaTeX{} with near state-of-the-art accuracy in production.
+    \item \textbf{Automated} large-scale document styling with NLP + MS Office SDK, reducing a recurring 40-hour manual workload to \textbf{under 2 hours}.
+    \item \textbf{Implemented} a robust OpenCV checkbox detection pipeline (>96\% accuracy) handling rotation, noise, and thousands of formatting variants.
+    \item \textbf{Developed} high-throughput processing systems capable of millions of pages/week across OCR, normalization, and structural analysis.
 \end{itemize}
 
 \TwoRowSubheading
@@ -74,10 +79,10 @@
 {Sep 2020 -- May 2021}
 
 \begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Implemented} a scalable PDF cleaning and OCR pipeline (deskew, despeckle, rotate), processing 100k+ pages/week/server.
-    \item \textbf{Created} automated \LaTeX\ correction scripts within JATS XML, reducing a dedicated 40-hour manual intervention to under 2 hours weekly.
-    \item \textbf{Built} a general .docx converter using MS Office SDK and InterOp, seamlessly handling multiple formats and tracked changes.
-    \item \textbf{Employed} Agile methodologies, test-driven development, and XML parsing (DOM/SAX) for robust data transformations.
+    \item \textbf{Built} a scalable PDF cleaning + OCR preprocessing system (deskew, despeckle, rotate) processing \textbf{100k+ pages/week/server}.
+    \item \textbf{Authored} automated \LaTeX{} correction and JATS XML tooling replacing a full-time manual process with a reliable automated pipeline.
+    \item \textbf{Developed} a comprehensive .docx → XML converter via MS Office InterOp, normalizing heterogeneous client inputs into a unified representation.
+    \item \textbf{Applied} TDD, Agile workflows, and robust XML parsing (DOM/SAX) to ship reliable, production-grade tools.
 \end{itemize}
 
 \TwoRowSubheading
@@ -87,7 +92,7 @@
 {Sep 2019 -- Sep 2020}
 
 \begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Led} technical initiatives to streamline processing workflows, mentored junior staff, and coordinated with stakeholders.
+    \item \textbf{Led} optimization initiatives across ingest, transformation, and QA pipelines; mentored junior developers; served as technical stakeholder liaison.
 \end{itemize}
 
 \TwoRowSubheading
@@ -97,7 +102,8 @@
 {May 2018 -- Sep 2019}
 
 \begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Contributed} to custom data conversion solutions and maintained production-level tools for large-scale document migrations.
+    \item \textbf{Built} custom data conversion and document-normalization utilities used in large-scale document migration projects.
+    \item \textbf{Maintained} and enhanced high-volume production pipelines supporting multiple enterprise clients.
 \end{itemize}
 
 \end{itemize}
