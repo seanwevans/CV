@@ -5,8 +5,8 @@
 \usepackage[margin=0.75in]{geometry}
 \usepackage{xcolor}
 \usepackage{titlesec}
-\usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{multicol}
 \usepackage{hyperref}
 \usepackage{fontawesome}
 \usepackage{array}
@@ -27,95 +27,58 @@
   \end{tabular*}
 }
 
+% Load CV data and run exporters
+\directlua{dofile("cv.lua")}
+
 \begin{document}
 
 % HEADER
 \begin{tabular*}{\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
- \Huge \textsc{Sean W. Evans} &
- \href{mailto:Sean@SeanWEvans.com}{E-Mail} \ \faEnvelopeO \\
- \faPhone\ \href{tel:15163302517}{+1 (516) 330-2517}  &
- \href{https://github.com/SeanWEvans}{Github} \ \faGithub \\
- \faHome\ \href{https://SeanWEvans.com}{SeanWEvans.com} & 
- \href{https://www.linkedin.com/in/sean-evans-49398229b}{Linked In} \ \faLinkedinSquare
+ \Huge \textsc{\directlua{tex.print(cv.name)}} &
+ \href{mailto:\directlua{tex.print(cv.email)}}{E-Mail} \ \faEnvelopeO \\
+ \faPhone\ \href{tel:\directlua{tex.print(cv.phone)}}{\directlua{tex.print(cv.phone)}} &
+ \href{\directlua{tex.print(cv.github)}}{Github} \ \faGithub \\
+ \faHome\ \href{\directlua{tex.print(cv.website)}}{Website} &
+ \href{\directlua{tex.print(cv.linkedin)}}{Linked In} \ \faLinkedinSquare
 \end{tabular*}
 
 % SUMMARY
 \section{Summary}
-Systems-level engineer with 6+ years building end-to-end ML, vision, and document-analysis pipelines, plus experience in C/C++/CUDA, runtime systems, Postgres tooling, and mathematical modeling. I specialize in rapid prototyping across abstraction layers (theory → GPU → product), automating complex workflows, and shipping high-reliability systems at scale.
+\directlua{tex.print(cv.summary)}
 
 % SKILLS
 \section{Skills}
 \begin{itemize}[leftmargin=*,label=]
-    \item \textbf{Languages:} Python, C, C++, CUDA, C\#, Perl, SQL (PostgreSQL/T-SQL)
-    \item \textbf{Machine Learning:} PyTorch, TensorFlow, Detectron2, CNN/RNN OCR, NLP (SpaCy)
-    \item \textbf{Computer Vision:} OpenCV, document segmentation, structural analysis
-    \item \textbf{Systems \& Performance:} Linux, Git, Make/CMake, multiprocessing, GPU kernels
-    \item \textbf{Data \& SDKs:} PostgreSQL, XML (DOM/SAX), PDF libraries, MS Office SDK, Adobe SDK
-    \item \textbf{Scientific \& Typesetting:} \LaTeX, MathJax, numerical \& geometric modeling
+\directlua{
+  for _, s in ipairs(cv.skills) do
+    tex.print("\\item \\textbf{" .. s.category .. ":} " .. table.concat(s.items, ", "))
+  end
+}
 \end{itemize}
 
-% EXPERIENCE 
+% EXPERIENCE
 \section{Experience}
 \begin{itemize}[leftmargin=*,label=]
-
-\TwoRowSubheading
-{Data Conversion Laboratory}
-{Remote}
-{Machine Learning Engineer}
-{May 2021 -- Feb 2025}
-
-\begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Designed} and deployed a Detectron2-based document segmentation model (equations, tables, figures) achieving industry-comparable accuracy and reducing manual classification by \textbf{50\%}.
-    \item \textbf{Built} a CNN–RNN equation OCR engine (Torch7/Lua) converting images to \LaTeX{} with near state-of-the-art accuracy in production.
-    \item \textbf{Automated} large-scale document styling with NLP + MS Office SDK, reducing a recurring 40-hour manual workload to \textbf{under 2 hours}.
-    \item \textbf{Implemented} a robust OpenCV checkbox detection pipeline (>96\% accuracy) handling rotation, noise, and thousands of formatting variants.
-    \item \textbf{Developed} high-throughput processing systems capable of millions of pages/week across OCR, normalization, and structural analysis.
-\end{itemize}
-
-\TwoRowSubheading
-{Data Conversion Laboratory}
-{Remote}
-{Software Engineer}
-{Sep 2020 -- May 2021}
-
-\begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Built} a scalable PDF cleaning + OCR preprocessing system (deskew, despeckle, rotate) processing \textbf{100k+ pages/week/server}.
-    \item \textbf{Authored} automated \LaTeX{} correction and JATS XML tooling replacing a full-time manual process with a reliable automated pipeline.
-    \item \textbf{Developed} a comprehensive .docx → XML converter via MS Office InterOp, normalizing heterogeneous client inputs into a unified representation.
-    \item \textbf{Applied} TDD, Agile workflows, and robust XML parsing (DOM/SAX) to ship reliable, production-grade tools.
-\end{itemize}
-
-\TwoRowSubheading
-{Data Conversion Laboratory}
-{Queens, NY}
-{Lead Technology Analyst}
-{Sep 2019 -- Sep 2020}
-
-\begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Led} optimization initiatives across ingest, transformation, and QA pipelines; mentored junior developers; served as technical stakeholder liaison.
-\end{itemize}
-
-\TwoRowSubheading
-{Data Conversion Laboratory}
-{Queens, NY}
-{Technology Analyst}
-{May 2018 -- Sep 2019}
-
-\begin{itemize}[leftmargin=1em,rightmargin=1em,label=]
-    \item \textbf{Built} custom data conversion and document-normalization utilities used in large-scale document migration projects.
-    \item \textbf{Maintained} and enhanced high-volume production pipelines supporting multiple enterprise clients.
-\end{itemize}
-
+\directlua{
+  for _, e in ipairs(cv.experience) do
+    tex.print("\\TwoRowSubheading{" .. e.company .. "}{" .. e.location .. "}{" .. e.title .. "}{" .. e.dates .. "}")
+    tex.print("\\begin{itemize}[leftmargin=1em,rightmargin=1em]")
+    for _, b in ipairs(e.bullets) do
+      tex.print("\\item " .. b)
+    end
+    tex.print("\\end{itemize}")
+  end
+}
 \end{itemize}
 
 % EDUCATION
 \section{Education}
-\begin{itemize}[leftmargin=*]    
-\TwoRowSubheading
-{Long Island University}
-{Long Island, NY}
-{Bachelor of Science in Mathematics}
-{2003--2026}
+\begin{itemize}[leftmargin=*]
+\directlua{
+  for _, ed in ipairs(cv.education) do
+    tex.print("\\TwoRowSubheading{" .. ed.institution .. "}{}{" .. ed.degree .. "}{" .. ed.dates .. "}")
+  end
+}
 \end{itemize}
 
 \end{document}
