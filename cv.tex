@@ -2,7 +2,7 @@
 
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -18,6 +18,7 @@
 }
 
 \titleformat{\section}{\scshape \Large}{}{0em}{}[\titlerule]
+
 \pagestyle{empty}
 
 \newcommand{\TwoRowSubheading}[4]{
@@ -27,13 +28,116 @@
   \end{tabular*}
 }
 
-% Load CV data and run exporters
-\directlua{dofile("cv.lua")}
+\newcommand{\ProjectHeading}[2]{
+  \item \begin{tabular*}{.95\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
+    \textbf{#1} & {\itshape #2} \\
+  \end{tabular*}
+}
+
+\directlua{
+local p = string.char(37)
+local h = string.char(35)
+
+cv = {
+    name = "Sean W. Evans",
+    email = "Sean@SeanWEvans.com",
+    phone = "+1 (516) 330-2517",
+    github = "https://github.com/SeanWEvans",
+    website = "https://SeanWEvans.com",
+    linkedin = "https://www.linkedin.com/in/sean-evans-49398229b/",
+    
+    summary = "Systems-level engineer specializing in High-Performance Computing (HPC), Database Internals, and Machine Learning. Expert in bridging theoretical modeling with production engineering using CUDA, Rust, and C++. Proven track record of optimizing high-throughput pipelines and developing novel open-source architectures, including GPU-accelerated physics engines and secure CI/CD static analysis tools.",
+
+    skills = {
+        { category = "Languages", items = {"Rust", "C++", "C", "CUDA", "Python", "SQL (Postgres/T-SQL)", "TypeScript"} },
+        { category = "Systems \\& HPC", items = {"GPU Kernels (CUDA/AVX)", "Distributed Consensus (Raft)", "Linux", "Compiler Design (AST)", "Multiprocessing"} },
+        { category = "Data \\& Databases", items = {"PostgreSQL Internals", "Extension Development", "Vector Search", "ETL Pipelines", "XML (DOM/SAX)"} },
+        { category = "Machine Learning", items = {"PyTorch", "TensorFlow", "Detectron2", "Computer Vision (OpenCV)", "Structural Analysis"} }
+    },
+
+    projects = {
+        {
+            name = "fluid-sims (High-Performance Computing)",
+            tech = "CUDA, C++, SPH, Navier-Stokes",
+            description = "Engineered a GPU-accelerated Computational Fluid Dynamics (CFD) engine. Implemented Smoothed-Particle Hydrodynamics (SPH) and Shallow Water Equations with log-depth stability, achieving real-time simulation of 100k+ particles."
+        },
+        {
+            name = "pg\\_os  \\& pg\\_gpt2 (Database Internals)",
+            tech = "C, PL/pgSQL, Postgres Extensions",
+            description = "Developed a custom runtime environment within PostgreSQL exposing OS primitives (processes, scheduler). Built a C-based extension to embed GPT-2 inference directly into the database engine for zero-latency batch processing."
+        },
+        {
+            name = "Ghast (Security Engineering)",
+            tech = "Python, AST Analysis, GitHub Actions",
+            description = "Built a static analysis tool for CI/CD pipelines preventing `Poisoned Pipeline Execution` and enforcing immutable action pinning. Integrates with SARIF for native GitHub Security alerts."
+        },
+        {
+            name = "raft-vm (Distributed Systems)",
+            tech = "Rust, Consensus Algorithms, Actor Model",
+            description = "Implemented a fault-tolerant virtual machine leveraging the Raft consensus algorithm and Actor model to ensure state replication and consistency across distributed nodes."
+        }
+    },
+
+    experience = {
+        {
+            company = "Data Conversion Laboratory",
+            location = "Remote",
+            title = "Machine Learning Engineer",
+            dates = "May 2021 -- Feb 2025",
+            bullets = {
+                "Designed a Detectron2-based document segmentation pipeline reducing manual classification by 50 \\" .. p .. ".",
+                "Built a CNN-RNN LaTeX OCR system with near state-of-the-art accuracy.",
+                "Automated document styling using NLP + MS Office SDK, reducing a 40-hour workflow to 2 hours.",
+                "Implemented an OpenCV-based checkbox detector achieving >96 \\" .. p .. " accuracy across thousands of formats.",
+                "Developed high-throughput pipelines capable of processing millions of pages per week."
+            }
+        },
+        {
+            company = "Data Conversion Laboratory",
+            location = "Remote",
+            title = "Software Engineer",
+            dates = "Sep 2020 -- May 2021",
+            bullets = {
+                "Architected a PDF cleaning and OCR preprocessing system scaling to 100k+ pages per week per server.",
+                "Automated LaTeX and JATS XML correction workflow, replacing a full-time manual process.",
+                "Developed robust .docx to XML conversion tooling using MS Office InterOp and C \\" .. h .. "."
+            }
+        },
+        {
+            company = "Data Conversion Laboratory",
+            location = "Queens, NY",
+            title = "Lead Technology Analyst",
+            dates = "Sep 2019 -- Sep 2020",
+            bullets = {
+                "Led workflow optimization initiatives, mentored junior engineers, and coordinated technical requirements with stakeholders."
+            }
+        },
+        {
+            company = "Data Conversion Laboratory",
+            location = "Queens, NY",
+            title = "Technology Analyst",
+            dates = "May 2018 -- Sep 2019",
+            bullets = {
+                "Developed custom data-conversion tools for production support and maintained high-volume enterprise pipelines."
+            }
+        }
+    },
+
+    education = {
+        {
+            institution = "Long Island University",
+            degree = "Bachelor of Science in Mathematics",
+            dates = "Fall 2025"
+        }
+    }
+}
+}
+
 
 \begin{document}
 
 % HEADER
-\begin{tabular*}{\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
+\begin{tabular*}{0.95\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
  \Huge \textsc{\directlua{tex.print(cv.name)}} &
  \href{mailto:\directlua{tex.print(cv.email)}}{E-Mail} \ \faEnvelopeO \\
  \faPhone\ \href{tel:\directlua{tex.print(cv.phone)}}{\directlua{tex.print(cv.phone)}} &
@@ -52,6 +156,19 @@
 \directlua{
   for _, s in ipairs(cv.skills) do
     tex.print("\\item \\textbf{" .. s.category .. ":} " .. table.concat(s.items, ", "))
+  end
+}
+\end{itemize}
+
+% OPEN SOURCE PROJECTS
+\section{Open Source Engineering}
+\begin{itemize}[leftmargin=*,label=]
+\directlua{
+  for _, p in ipairs(cv.projects) do
+    tex.print("\\ProjectHeading{" .. p.name .. "}{" .. p.tech .. "}")
+    tex.print("\\begin{itemize}[leftmargin=1em,rightmargin=1em]")
+    tex.print("\\item " .. p.description)
+    tex.print("\\end{itemize}")
   end
 }
 \end{itemize}
