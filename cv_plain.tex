@@ -1,0 +1,93 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.667in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\setlist[itemize]{
+  leftmargin=2em,
+  itemsep=0pt,
+  topsep=0pt,  
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\titlerule]
+
+\newcommand{\resumeSubheading}[4]{%
+  \textbf{#1} \hfill #2\\
+  \underline{\textit{#3}} \hfill \textit{#4}\\
+  \vspace{-1em}
+}
+
+\begin{document}
+
+{\LARGE \textbf{Sean W. Evans}}\\
+Sean@SeanWEvans.com | +1 (516) 330-2517 |
+\href{https://github.com/SeanWEvans}{GitHub} |
+\href{https://SeanWEvans.com}{Website} |
+\href{https://www.linkedin.com/in/sean-evans-49398229b/}{LinkedIn}
+
+\section{Summary}
+Systems engineer focused on HPC, database internals, and ML infrastructure. Built GPU simulation engines, PostgreSQL extensions, OCR pipelines, and CI/CD security tooling in C++, CUDA, Rust, Python, and SQL.
+
+\section{Experience}
+
+\resumeSubheading{Data Conversion Laboratory}{Remote}{Machine Learning Engineer}{May 2021 -- Feb 2025}
+\begin{itemize}
+  \item Designed a Detectron2-based document segmentation pipeline that reduced manual classification by 50\%.
+  \item Built a CNN--RNN LaTeX OCR system for high-accuracy equation and document recognition.
+  \item Automated document styling with NLP and the Microsoft Office SDK, reducing a 40-hour workflow to 2 hours.
+  \item Implemented an OpenCV-based checkbox detector achieving greater than 96\% accuracy across thousands of formats.
+  \item Developed high-throughput processing pipelines capable of handling millions of pages per week.
+\end{itemize}
+
+\resumeSubheading{Data Conversion Laboratory}{Remote}{Software Engineer}{Sep 2020 -- May 2021}
+\begin{itemize}
+  \item Architected a PDF cleaning and OCR preprocessing system scaling to more than 100{,}000 pages per week per server.
+  \item Automated LaTeX and JATS XML correction workflows, replacing a full-time manual process.
+  \item Developed DOCX-to-XML conversion tooling using Microsoft Office Interop and C\#.
+\end{itemize}
+
+\resumeSubheading{Data Conversion Laboratory}{Queens, NY}{Lead Technology Analyst}{Sep 2019 -- Sep 2020}
+\begin{itemize}
+  \item Led workflow optimization efforts, mentored junior engineers, and coordinated technical requirements with stakeholders.
+\end{itemize}
+
+\resumeSubheading{Data Conversion Laboratory}{Queens, NY}{Technology Analyst}{May 2018 -- Sep 2019}
+\begin{itemize}
+  \item Developed custom data-conversion tools for production support and maintained high-volume enterprise pipelines.
+\end{itemize}
+
+\section{Selected Projects}
+\begin{itemize}
+  \item \textbf{Lockstep} -- Data-oriented systems programming language for high-throughput, deterministic compute pipelines, enforcing a straight-line SIMD execution model and static memory topology for maximum CPU vectorization.
+  \item \textbf{fluid-sims} -- Collection of high-performance, CUDA-accelerated fluid dynamics and physics simulators, including SPH, hypersonic flow, and reaction-diffusion systems.
+  \item \textbf{pg\_gpt2} -- Complete implementation of the GPT-2 architecture entirely inside PostgreSQL, featuring a native tensor engine, autograd, and AdamW optimization for end-to-end training and inference via SQL.
+  \item \textbf{WarpDB} -- GPU-accelerated SQL query engine that leverages CUDA JIT compilation to dynamically generate optimized kernels for high-performance analytical workloads and multi-GPU data processing.
+  \item \textbf{Baloo} -- Collection of essential UNIX utilities written in pure x86\_64 assembly using direct syscalls. No libc, no dependencies.
+\end{itemize}
+
+\section{Skills}
+\textbf{Languages:} Rust, C++, C, NASM, CUDA, Python, SQL, TypeScript\\
+\textbf{Systems:} Linux, multiprocessing, GPU kernels, distributed systems, consensus algorithms, compiler tooling, AST analysis\\
+\textbf{Databases:} PostgreSQL internals, extension development, vector search, ETL pipelines, XML processing\\
+\textbf{ML / CV:} PyTorch, Detectron2, OpenCV, OCR pipelines
+
+\section{Education}
+\textbf{Long Island University} \hfill January 2026\\
+B.S. in Mathematics
+
+\end{document}
