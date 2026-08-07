@@ -1,201 +1,206 @@
-\documentclass[a4paper]{article}
+\documentclass[10pt,letterpaper]{article}
 
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\usepackage[margin=0.5in]{geometry}
-\usepackage{xcolor}
-\usepackage{titlesec}
+\usepackage[margin=0.3333in]{geometry}
+
 \usepackage{enumitem}
-\usepackage{multicol}
-\usepackage{hyperref}
-\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{tabularx}
 \usepackage{array}
-
-\hypersetup{
-    colorlinks=true,
-    urlcolor=blue,
-    linkcolor=black
-}
-
-\titleformat{\section}{\scshape \Large}{}{0em}{}[\titlerule]
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{lmodern}
 
 \pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
 
-\newcommand{\TwoRowSubheading}[4]{
-  \item \begin{tabular*}{.95\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
-    \textbf{#1} & \textbf{#2} \\
-    {\color{gray}#3} & {\itshape #4} \\
-  \end{tabular*}
+\definecolor{heading}{HTML}{111111}
+\definecolor{muted}{HTML}{555555}
+
+\titleformat{\section}
+  {\large\bfseries\color{heading}}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}\rule{\linewidth}{0.4pt}]
+
+\titlespacing*{\section}
+  {0pt}
+  {7pt}
+  {4pt}
+
+\setlist[itemize]{
+    leftmargin=1.15em,
+    itemsep=1.3pt,
+    topsep=1.5pt,
+    parsep=0pt,
+    partopsep=0pt
 }
 
-\newcommand{\ProjectHeading}[2]{
-  \item \begin{tabular*}{.95\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
-    \textbf{#1} & {\itshape #2} \\
-  \end{tabular*}
+\newcommand{\job}[4]{%
+    \begin{tabularx}{\linewidth}{@{}X r@{}}
+        \textbf{#1} & \textbf{#2} \\
+        \textit{#3} & \textit{#4}
+    \end{tabularx}
+    \vspace{-2pt}
 }
 
-\directlua{
-local p = string.char(37)
-local h = string.char(35)
-
-cv = {
-    name = "Sean W. Evans",
-    email = "Sean@SeanWEvans.com",
-    phone = "+1 (516) 330-2517",
-    github = "https://github.com/SeanWEvans",
-    website = "https://SeanWEvans.com",
-    linkedin = "https://www.linkedin.com/in/sean-evans-49398229b/",
-    
-    summary = "Systems-level engineer specializing in High-Performance Computing (HPC), Database Internals, and Machine Learning. Expert in bridging theoretical modeling with production engineering using CUDA, Rust, and C++. Proven track record of optimizing high-throughput pipelines and developing novel open-source architectures, including GPU-accelerated physics engines and secure CI/CD static analysis tools.",
-
-    skills = {
-        { category = "Languages", items = {"Rust", "C++", "C", "CUDA", "Python", "SQL (Postgres/T-SQL)", "TypeScript"} },
-        { category = "Systems \\& HPC", items = {"GPU Kernels (CUDA/AVX)", "Distributed Consensus (Raft)", "Linux", "Compiler Design (AST)", "Multiprocessing"} },
-        { category = "Data \\& Databases", items = {"PostgreSQL Internals", "Extension Development", "Vector Search", "ETL Pipelines", "XML (DOM/SAX)"} },
-        { category = "Machine Learning", items = {"PyTorch", "TensorFlow", "Detectron2", "Computer Vision (OpenCV)", "Structural Analysis"} }
-    },
-
-    projects = {
-        {
-            name = "fluid-sims (High-Performance Computing)",
-            tech = "CUDA, C++, SPH, Navier-Stokes",
-            description = "Engineered a GPU-accelerated Computational Fluid Dynamics (CFD) engine. Implemented Smoothed-Particle Hydrodynamics (SPH) and Shallow Water Equations with log-depth stability, achieving real-time simulation of 100k+ particles."
-        },
-        {
-            name = "pg\\_os  \\& pg\\_gpt2 (Database Internals)",
-            tech = "C, PL/pgSQL, Postgres Extensions",
-            description = "Developed a custom runtime environment within PostgreSQL exposing OS primitives (processes, scheduler). Built a C-based extension to embed GPT-2 inference directly into the database engine for zero-latency batch processing."
-        },
-        {
-            name = "Ghast (Security Engineering)",
-            tech = "Python, AST Analysis, GitHub Actions",
-            description = "Built a static analysis tool for CI/CD pipelines preventing poisoned pipeline execution and enforcing immutable action pinning. Integrates with SARIF for native GitHub Security alerts."
-        },
-        {
-            name = "raft-vm (Distributed Systems)",
-            tech = "Rust, Consensus Algorithms, Actor Model",
-            description = "Implemented a fault-tolerant virtual machine leveraging the Raft consensus algorithm and Actor model to ensure state replication and consistency across distributed nodes."
-        }
-    },
-
-    experience = {
-        {
-            company = "Data Conversion Laboratory",
-            location = "Remote",
-            title = "Machine Learning Engineer",
-            dates = "May 2021 -- Feb 2025",
-            bullets = {
-                "Designed a Detectron2-based document segmentation pipeline reducing manual classification by 50 \\" .. p .. ".",
-                "Built a CNN-RNN LaTeX OCR system with near state-of-the-art accuracy.",
-                "Automated document styling using NLP + MS Office SDK, reducing a 40-hour workflow to 2 hours.",
-                "Implemented an OpenCV-based checkbox detector achieving >96 \\" .. p .. " accuracy across thousands of formats.",
-                "Developed high-throughput pipelines capable of processing millions of pages per week."
-            }
-        },
-        {
-            company = "Data Conversion Laboratory",
-            location = "Remote",
-            title = "Software Engineer",
-            dates = "Sep 2020 -- May 2021",
-            bullets = {
-                "Architected a PDF cleaning and OCR preprocessing system scaling to 100k+ pages per week per server.",
-                "Automated LaTeX and JATS XML correction workflow, replacing a full-time manual process.",
-                "Developed robust .docx to XML conversion tooling using MS Office InterOp and C \\" .. h .. "."
-            }
-        },
-        {
-            company = "Data Conversion Laboratory",
-            location = "Queens, NY",
-            title = "Lead Technology Analyst",
-            dates = "Sep 2019 -- Sep 2020",
-            bullets = {
-                "Led workflow optimization initiatives, mentored junior engineers, and coordinated technical requirements with stakeholders."
-            }
-        },
-        {
-            company = "Data Conversion Laboratory",
-            location = "Queens, NY",
-            title = "Technology Analyst",
-            dates = "May 2018 -- Sep 2019",
-            bullets = {
-                "Developed custom data-conversion tools for production support and maintained high-volume enterprise pipelines."
-            }
-        }
-    },
-
-    education = {
-        {
-            institution = "Long Island University",
-            degree = "Bachelor of Science in Mathematics",
-            dates = "January 2026"
-        }
-    }
+\newcommand{\project}[2]{%
+    \textbf{#1} --- #2
 }
-}
-
 
 \begin{document}
 
-% HEADER
-\begin{tabular*}{0.95\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
- \Huge \textsc{\directlua{tex.print(cv.name)}} &
- \href{mailto:\directlua{tex.print(cv.email)}}{E-Mail} \ \faEnvelopeO \\
- \faPhone\ \href{tel:\directlua{tex.print(cv.phone)}}{\directlua{tex.print(cv.phone)}} &
- \href{\directlua{tex.print(cv.github)}}{Github} \ \faGithub \\
- \faHome\ \href{\directlua{tex.print(cv.website)}}{Website} &
- \href{\directlua{tex.print(cv.linkedin)}}{Linked In} \ \faLinkedinSquare
-\end{tabular*}
+{\LARGE\bfseries Sean W. Evans}
 
-% SUMMARY
-\section{Summary}
-\directlua{tex.print(cv.summary)}
+\begin{center}
+\href{mailto:Sean@SeanWEvans.com}{Sean@SeanWEvans.com}
+\quad|\quad +1 (516) 330-2517
+\quad|\quad \href{https://github.com/seanwevans}{GitHub}
+\quad|\quad \href{https://seanwevans.com}{SeanWEvans.com}
+\quad|\quad \href{https://www.linkedin.com/in/sean-evans-49398229b/}{LinkedIn}
+\end{center}
 
-% SKILLS
-\section{Skills}
-\begin{itemize}[leftmargin=*,label=]
-\directlua{
-  for _, s in ipairs(cv.skills) do
-    tex.print("\\item \\textbf{" .. s.category .. ":} " .. table.concat(s.items, ", "))
-  end
-}
+\section*{Summary}
+
+Systems engineer with production experience in machine learning,
+high-throughput data processing, and software infrastructure, now focused on
+research engineering in high-performance mathematical computing, compilers,
+GPU/FPGA acceleration, and database internals. Builds experimental systems from
+mathematical formulation through low-level implementation, validation, and
+performance measurement using C++, C, CUDA, Rust, Python, SQL, LLVM, and RTL.
+
+\section*{Experience}
+
+\job
+  {Data Conversion Laboratory}
+  {Remote}
+  {Machine Learning Engineer}
+  {May 2021 -- Feb 2025}
+
+\begin{itemize}
+    \item Designed a Detectron2-based document segmentation pipeline that reduced
+          manual classification by 50\%.
+    \item Built a CNN--RNN LaTeX OCR system for high-accuracy equation and
+          document recognition.
+    \item Automated document styling with NLP and the Microsoft Office SDK,
+          reducing a 40-hour workflow to 2 hours.
+    \item Implemented an OpenCV-based checkbox detector achieving greater than
+          96\% accuracy across thousands of formats.
+    \item Developed high-throughput processing pipelines capable of handling
+          millions of pages per week.
 \end{itemize}
 
-% OPEN SOURCE PROJECTS
-\section{Open Source Engineering}
-\begin{itemize}[leftmargin=*,label=]
-\directlua{
-  for _, p in ipairs(cv.projects) do
-    tex.print("\\ProjectHeading{" .. p.name .. "}{" .. p.tech .. "}")
-    tex.print("\\begin{itemize}[leftmargin=1em,rightmargin=1em]")
-    tex.print("\\item " .. p.description)
-    tex.print("\\end{itemize}")
-  end
-}
+\vspace{1pt}
+
+\job
+  {Data Conversion Laboratory}
+  {Remote}
+  {Software Engineer}
+  {Sep 2020 -- May 2021}
+
+\begin{itemize}
+    \item Architected a PDF cleaning and OCR preprocessing system scaling to more
+          than 100,000 pages per week per server.
+    \item Automated LaTeX and JATS XML correction workflows, replacing a
+          full-time manual process.
+    \item Developed DOCX-to-XML conversion tooling using Microsoft Office Interop
+          and C\#.
 \end{itemize}
 
-% EXPERIENCE
-\section{Experience}
-\begin{itemize}[leftmargin=*,label=]
-\directlua{
-  for _, e in ipairs(cv.experience) do
-    tex.print("\\TwoRowSubheading{" .. e.company .. "}{" .. e.location .. "}{" .. e.title .. "}{" .. e.dates .. "}")
-    tex.print("\\begin{itemize}[leftmargin=1em,rightmargin=1em]")
-    for _, b in ipairs(e.bullets) do
-      tex.print("\\item " .. b)
-    end
-    tex.print("\\end{itemize}")
-  end
-}
+\vspace{1pt}
+
+\job
+  {Data Conversion Laboratory}
+  {Queens, NY}
+  {Lead Technology Analyst}
+  {Sep 2019 -- Sep 2020}
+
+\begin{itemize}
+    \item Led workflow optimization efforts, mentored junior engineers, and
+          coordinated technical requirements with stakeholders.
 \end{itemize}
 
-% EDUCATION
-\section{Education}
-\begin{itemize}[leftmargin=*]
-\directlua{
-  for _, ed in ipairs(cv.education) do
-    tex.print("\\TwoRowSubheading{" .. ed.institution .. "}{}{" .. ed.degree .. "}{" .. ed.dates .. "}")
-  end
-}
+\vspace{1pt}
+
+\job
+  {Data Conversion Laboratory}
+  {Queens, NY}
+  {Technology Analyst}
+  {May 2018 -- Sep 2019}
+
+\begin{itemize}
+    \item Developed custom data-conversion tools for production support and
+          maintained high-volume enterprise pipelines.
 \end{itemize}
+
+\section*{Selected Research \& Engineering Projects}
+
+\begin{itemize}
+
+    \item
+    \project{\href{https://github.com/seanwevans/pynq_butterfly}
+    {pynq\_butterfly}}
+    {Exact FPGA accelerator for OpenFHE BGVRNS ciphertext multiplication and BV
+    relinearization on a PYNQ-Z2. Achieved 245.61 exact relinearized
+    ciphertexts/sec at 98.84\% of the calculated transport ceiling; validated
+    6,291,456 residue outputs against OpenFHE with zero mismatches.}
+
+    \item
+    \project{\href{https://github.com/seanwevans/lockstep}{Lockstep}}
+    {Data-oriented systems programming language and compiler for deterministic,
+    high-throughput compute pipelines. Implements straight-line SIMD execution,
+    static memory topology, semantic type checking, LLVM IR generation, manual
+    vector lowering, benchmarking, and LSP support.}
+
+    \item
+    \project{\href{https://github.com/seanwevans/fluid-sims}{fluid-sims}}
+    {CUDA-accelerated numerical simulation laboratory spanning SPH fluids,
+    hypersonic flow, reaction-diffusion, Burgers flow, shallow-water systems,
+    and 3-D fluid dynamics.}
+
+    \item
+    \project{\href{https://github.com/seanwevans/pg_gpt2}{pg\_gpt2}}
+    {Complete GPT-2 implementation inside PostgreSQL, including a native C tensor
+    engine, relational reverse-mode autodiff, AdamW optimization, checkpointing,
+    tokenization, training, and inference through SQL.}
+
+    \item
+    \project{\href{https://github.com/seanwevans/WarpDB}{WarpDB}}
+    {GPU analytical query engine that parses SQL-like expressions into ASTs and
+    JIT-compiles them into CUDA kernels using NVRTC, with columnar-data and
+    multi-GPU execution support.}
+
+\end{itemize}
+
+\section*{Technical Skills}
+
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}l @{\hspace{0.55em}} X@{}}
+
+Languages &
+Rust, C++, C, NASM, CUDA, Python, SQL, TypeScript \\
+
+Systems &
+Linux, GPU kernels, FPGA/RTL, LLVM, SIMD, multiprocessing,
+distributed systems, consensus algorithms, compiler tooling, AST analysis \\
+
+Databases &
+PostgreSQL internals, extension development, query execution,
+vector search, ETL pipelines, XML processing \\
+
+ML / CV &
+PyTorch, Detectron2, OpenCV, OCR pipelines, neural-network training
+and inference \\
+
+\end{tabularx}
+
+\section*{Education}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{Long Island University} & \textbf{January 2026} \\
+    B.S. in Mathematics &
+\end{tabularx}
 
 \end{document}
