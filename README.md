@@ -1,3 +1,6 @@
+<img alt="Sean Evans résumé" src="https://github.com/user-attachments/assets/1080d848-9075-4802-988c-91d9896df8b6" />
+
+
 # Sean W. Evans
 
 **Research Engineer — HPC, Compilers, GPU/FPGA, Database Internals**
